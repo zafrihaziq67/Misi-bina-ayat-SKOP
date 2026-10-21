@@ -1,0 +1,1190 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Misi Bina Ayat Cikgu Zafri</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Atkinson+Hyperlegible:wght@400;700&family=Patrick+Hand&display=swap">
+<style>
+:root{
+  /* Layout: a school workbook. Menu is text + mascot stage. Game is a sticky status bar, then picture card beside a ruled-paper answer sheet (stacked on phones). Word roles reuse four marker colours everywhere: S blue, K orange, O yellow, P white. */
+  --blue:#1F6FE5;
+  --blue-deep:#0F2F73;
+  --sky:#E4F0FF;
+  --sky-2:#C9E0FF;
+  --sun:#FFD23F;
+  --sun-deep:#C99A00;
+  --sun-soft:#FFF3B5;
+  --orange:#FF8A1F;
+  --orange-soft:#FFDDBA;
+  --orange-deep:#B94A00;
+  --paper:#FFFFFF;
+  --ink:#102A5C;
+  --ink-soft:#44608F;
+  --line:#BBD3F5;
+  --margin:#FFA970;
+  --role-s:#CFE3FF;
+  --role-k:#FFD9B0;
+  --role-o:#FFEE8A;
+  --font-display:"Baloo 2","Trebuchet MS","Segoe UI",sans-serif;
+  --font-body:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+  --font-hand:"Patrick Hand","Segoe Print","Comic Sans MS",cursive;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0;
+  background-color:var(--sky);
+  background-image:radial-gradient(var(--sky-2) 1.6px,transparent 1.8px);
+  background-size:26px 26px;
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:18px;
+  line-height:1.45;
+  min-height:100vh;
+  padding-block:16px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--sky)}
+.wrap{max-width:1080px;margin:0 auto}
+h1,h2,h3,p,ol{margin:0}
+[data-focus]:focus{outline:none}
+
+/* Buttons */
+.btn{font-family:var(--font-display);font-weight:700;font-size:1.25rem;letter-spacing:.03em;line-height:1.1;border:0;border-radius:18px;padding:14px 26px;min-height:58px;cursor:pointer;color:#fff;background:var(--blue);box-shadow:0 6px 0 var(--blue-deep),0 12px 16px rgba(15,47,115,.18);transition:transform .08s,box-shadow .08s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(5px);box-shadow:0 1px 0 var(--blue-deep)}
+.btn:focus-visible,.link:focus-visible,textarea:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:0 6px 0 var(--blue-deep)}
+.btn.sun{background:var(--sun);color:var(--ink);box-shadow:0 6px 0 var(--sun-deep),0 12px 16px rgba(15,47,115,.14)}
+.btn.sun:active{box-shadow:0 1px 0 var(--sun-deep)}
+.btn.sun:disabled{box-shadow:0 6px 0 var(--sun-deep)}
+.btn.ghost{background:#fff;color:var(--blue-deep);box-shadow:0 5px 0 var(--line),0 10px 14px rgba(15,47,115,.1)}
+.btn.ghost:active{box-shadow:0 1px 0 var(--line)}
+.btn.ghost:disabled{box-shadow:0 5px 0 var(--line)}
+.btn.big{font-size:1.6rem;min-height:70px;padding:16px 34px;border-radius:22px}
+.btn.mini{font-size:1rem;padding:8px 16px;min-height:44px;border-radius:14px;box-shadow:0 4px 0 var(--line)}
+
+/* Menu */
+.menu{display:grid;gap:22px 40px;grid-template-columns:1fr;align-items:center;padding-block:6px}
+@media(min-width:860px){.menu{grid-template-columns:1.1fr 1fr;min-height:70vh}}
+.eyebrow{display:inline-block;font-weight:700;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.title{font-family:var(--font-display);font-weight:800;line-height:.95;color:var(--blue-deep);font-size:clamp(2.9rem,11vw,5.6rem);text-wrap:balance}
+.title .hl{background:linear-gradient(transparent 58%,var(--sun) 58%,var(--sun) 92%,transparent 92%);padding-inline:.08em;display:inline}
+.stamp{display:inline-block;margin-top:14px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.2rem,4.2vw,1.8rem);letter-spacing:.12em;color:var(--orange-deep);border:4px solid var(--orange-deep);border-radius:12px;padding:4px 16px 0;transform:rotate(-2.5deg);background:rgba(255,255,255,.6)}
+.ask{margin-top:22px;max-width:26ch;font-family:var(--font-display);font-weight:700;font-size:1.5rem;line-height:1.2;color:var(--ink);text-wrap:balance}
+.menu-btns{display:grid;gap:14px;margin-top:22px;max-width:380px}
+.menu-btns .btn{width:100%}
+.menu-art{position:relative;aspect-ratio:1/1;width:100%;max-width:420px;margin:0 auto}
+.owl-big{position:absolute;left:19%;top:12%;width:62%;height:auto;animation:sway 3.8s ease-in-out infinite;transform-origin:50% 100%}
+.floater{position:absolute;font-family:var(--font-display);font-weight:800;font-size:clamp(1.1rem,4vw,1.5rem);border:3px solid var(--blue-deep);border-radius:14px;padding:6px 14px 2px;box-shadow:0 4px 0 rgba(15,47,115,.25);animation:bob 3.2s ease-in-out infinite}
+.floater small{display:block;font-size:.55em;letter-spacing:.1em;font-weight:700;text-align:center;margin-top:-2px;color:var(--ink-soft)}
+.f-s{background:var(--role-s);left:0;top:6%}
+.f-k{background:var(--role-k);right:0;top:24%;animation-delay:.5s}
+.f-o{background:var(--role-o);left:12%;bottom:4%;animation-delay:1s}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+@keyframes sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+
+/* Panels */
+.panel{background:var(--paper);border-radius:26px;padding:24px 22px 28px;box-shadow:0 8px 0 rgba(15,47,115,.1),0 16px 28px rgba(15,47,115,.12);display:grid;gap:18px}
+.narrow{max-width:700px;margin:6px auto 0}
+.panel-head{display:flex;align-items:center;gap:16px}
+.owl-sm{flex:none;width:84px;height:auto}
+h2{font-family:var(--font-display);font-weight:800;font-size:1.9rem;line-height:1.1;color:var(--blue-deep);text-wrap:balance}
+h3{font-family:var(--font-display);font-weight:700;font-size:1.3rem;color:var(--ink)}
+.steps{list-style:none;counter-reset:s;padding:0;display:grid;gap:10px}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:center;background:var(--sky);border-radius:16px;padding:12px 14px;font-weight:700}
+.steps li::before{content:counter(s);flex:none;width:38px;height:38px;border-radius:50%;background:var(--sun);color:var(--ink);font:800 1.2rem var(--font-display);display:grid;place-items:center;padding-top:3px}
+.row-btns{display:flex;gap:14px;flex-wrap:wrap}
+.credit-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.credit-list li{background:var(--sky);border-radius:14px;padding:12px 14px;font-weight:700}
+.credit-list span{display:block;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* SKOP tiles */
+.skop{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.tile{border:3px solid var(--blue-deep);border-radius:16px;padding:10px 12px 12px;display:grid;gap:2px;align-content:start}
+.tile b{font-family:var(--font-display);font-weight:800;font-size:1.15rem;color:var(--ink)}
+.tile b i{font-style:normal;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#fff;border:3px solid var(--ink);margin-right:8px;padding-top:2px}
+.tile p{font-weight:700;font-size:.95rem}
+.tile.s{background:var(--role-s)}
+.tile.k{background:var(--role-k)}
+.tile.o{background:var(--role-o)}
+.tile.p{background:#fff;border-style:dashed}
+
+/* Game */
+.bar-wrap{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--sky);padding-block:4px 10px}
+.status{background:var(--paper);border-radius:20px;padding:10px 14px 12px;box-shadow:0 5px 0 rgba(15,47,115,.1),0 10px 18px rgba(15,47,115,.1);display:grid;gap:8px}
+.status-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;justify-content:space-between}
+.qlabel{font-family:var(--font-display);font-weight:800;font-size:1.25rem;color:var(--blue-deep);font-variant-numeric:tabular-nums}
+.score{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.score b{font-weight:800;font-size:1.5rem;color:var(--ink);background:var(--sun);border-radius:12px;padding:2px 12px 0;font-variant-numeric:tabular-nums;min-width:3ch;text-align:center}
+.score b.bump{animation:bump .5s ease}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.3)}100%{transform:scale(1)}}
+.bar{height:14px;border-radius:999px;background:var(--sky-2);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--blue);border-radius:999px;transition:width .35s ease}
+.play{display:grid;gap:18px;grid-template-columns:minmax(0,1fr);margin-top:6px}
+@media(min-width:900px){.play{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:start}.scene-card{position:sticky;top:120px}}
+.scene-card{background:var(--paper);border-radius:24px;padding:12px 12px 16px;box-shadow:0 7px 0 rgba(15,47,115,.1),0 14px 24px rgba(15,47,115,.1);display:grid;gap:12px}
+.tag{justify-self:start;font-family:var(--font-display);font-weight:800;font-size:1.05rem;color:var(--ink);background:var(--sun);border-radius:12px 12px 12px 0;padding:3px 14px 0}
+.scene{aspect-ratio:320/220;width:100%;border-radius:16px;overflow:hidden;border:3px solid var(--sky-2);background:var(--sky)}
+.scene svg{display:block;width:100%;height:100%}
+.task{display:flex;gap:12px;align-items:center;font-weight:700}
+.task .owl-sm{width:56px}
+.work{display:grid;gap:14px;min-width:0}
+.work label{font-family:var(--font-display);font-weight:800;font-size:1.3rem;color:var(--blue-deep)}
+.paper{border:3px solid var(--blue);border-radius:18px;overflow:hidden;background:#fff}
+.paper:focus-within{box-shadow:0 0 0 5px rgba(31,111,229,.28)}
+textarea{display:block;width:100%;min-height:200px;resize:vertical;border:0;outline:0;margin:0;padding:0 14px 0 64px;font:400 24px/40px var(--font-hand);color:var(--ink);background-color:#fff;background-image:linear-gradient(90deg,transparent 50px,var(--margin) 50px,var(--margin) 52px,transparent 52px),repeating-linear-gradient(to bottom,transparent 0,transparent 38px,var(--line) 38px,var(--line) 40px);background-attachment:local}
+textarea::placeholder{color:#7C93BD}
+textarea:disabled{color:var(--ink);opacity:1}
+.actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.hints{list-style:none;padding:0;display:grid;gap:8px}
+.hints li{background:var(--sun-soft);border:3px solid var(--sun);border-radius:14px;padding:10px 14px;font-weight:700;animation:pop .3s ease}
+.hints b{display:block;font-family:var(--font-display);font-weight:800;color:var(--orange-deep);font-size:1rem;letter-spacing:.04em}
+.fb{border-radius:20px;padding:16px 18px;display:grid;gap:10px;animation:pop .35s ease}
+.fb h3{font-size:1.45rem;line-height:1.15}
+.fb p{font-weight:700}
+.fb.good{background:var(--sun-soft);border:4px solid var(--sun)}
+.fb.good h3{color:var(--blue-deep)}
+.fb.retry{background:#FFF1E0;border:4px solid var(--orange)}
+.fb.retry h3{color:var(--orange-deep)}
+.fb.skip{background:var(--sky);border:4px solid var(--blue)}
+.fb .plus{justify-self:start;font-family:var(--font-display);font-weight:800;color:#fff;background:var(--blue);border-radius:999px;padding:2px 16px 0}
+.fb .small{font-size:.95rem;color:var(--ink-soft)}
+@keyframes pop{0%{transform:scale(.94);opacity:.4}100%{transform:scale(1);opacity:1}}
+.chips{display:flex;flex-wrap:wrap;gap:8px 6px;padding-block:4px}
+.w{display:inline-flex;flex-direction:column;align-items:center;gap:1px;border:3px solid var(--ink-soft);border-radius:12px;padding:4px 10px 2px;background:#fff;font-family:var(--font-hand);font-size:1.4rem;line-height:1.2}
+.w span{font-family:var(--font-display);font-weight:800;font-size:.75rem;letter-spacing:.08em;color:var(--ink)}
+.w.S{background:var(--role-s);border-color:var(--blue)}
+.w.K{background:var(--role-k);border-color:var(--orange)}
+.w.O{background:var(--role-o);border-color:#E0B400}
+.w.P{border-style:dashed;border-color:#7B95C4}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:.85rem;font-weight:700;color:var(--ink-soft)}
+.legend em{font-style:normal;display:inline-block;width:14px;height:14px;border-radius:4px;border:2px solid var(--ink-soft);margin-right:4px;vertical-align:-2px}
+.after{display:flex;gap:12px;flex-wrap:wrap}
+.after .btn{flex:1 1 220px}
+.confetti{position:fixed;width:10px;height:10px;border-radius:3px;z-index:999;pointer-events:none}
+
+/* Results */
+.result{max-width:720px;margin:6px auto 0;text-align:center;justify-items:center}
+.ribbon{font-family:var(--font-display);font-weight:800;font-size:clamp(1.9rem,7vw,2.9rem);line-height:1.05;color:var(--orange-deep);border:5px solid var(--orange-deep);border-radius:16px;padding:6px 20px 2px;transform:rotate(-1.5deg);text-wrap:balance;background:rgba(255,238,204,.6)}
+.ring{--p:0;width:180px;height:180px;border-radius:50%;background:conic-gradient(var(--blue) calc(var(--p)*1%),var(--sky-2) 0);display:grid;place-items:center}
+.ring>div{width:142px;height:142px;border-radius:50%;background:#fff;display:grid;place-items:center;font:800 2.7rem var(--font-display);color:var(--blue-deep);font-variant-numeric:tabular-nums;padding-top:6px}
+.cat{font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.1;color:var(--blue-deep);text-wrap:balance}
+.cat-msg{font-weight:700;color:var(--ink-soft);max-width:44ch}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;width:100%}
+.stat{background:var(--sky);border-radius:18px;padding:12px 14px;display:grid;gap:2px}
+.stat span{font-weight:700;font-size:.9rem;color:var(--ink-soft)}
+.stat b{font-family:var(--font-display);font-weight:800;font-size:1.8rem;color:var(--blue-deep);font-variant-numeric:tabular-nums}
+.review{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;width:100%;max-width:480px}
+@media(min-width:520px){.review{grid-template-columns:repeat(10,minmax(0,1fr));max-width:none}}
+.rv{border-radius:12px;padding:6px 0 4px;font-family:var(--font-display);font-weight:800;line-height:1.1;display:grid;gap:0;border:3px solid var(--line);background:#fff}
+.rv small{font-weight:700;font-size:.7rem;letter-spacing:.04em;font-family:var(--font-body)}
+.rv.ya{background:var(--sun-soft);border-color:var(--sun)}
+.rv.tidak{background:var(--sky);border-style:dashed;border-color:var(--blue)}
+.actions-end{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+
+@media(max-width:480px){
+  body{font-size:17px}
+  .qlabel{order:3;flex:1 0 100%;font-size:1.1rem}
+  .owl-sm{width:68px}
+  .btn.big{padding:14px 24px}
+  .ring{width:156px;height:156px}.ring>div{width:124px;height:124px;font-size:2.4rem}
+  textarea{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="owl" viewBox="0 0 200 220">
+<ellipse cx="100" cy="212" rx="52" ry="6" fill="#0F2F73" opacity=".14"/>
+<ellipse cx="80" cy="202" rx="16" ry="7" fill="#FF8A1F"/>
+<ellipse cx="120" cy="202" rx="16" ry="7" fill="#FF8A1F"/>
+<ellipse cx="100" cy="140" rx="60" ry="64" fill="#2F7BEA"/>
+<ellipse cx="100" cy="152" rx="40" ry="46" fill="#fff"/>
+<g fill="none" stroke="#BBD3F5" stroke-width="3" stroke-linecap="round">
+<path d="M82 134q6 6 12 0M106 134q6 6 12 0M70 152q6 6 12 0M94 152q6 6 12 0M118 152q6 6 12 0M82 170q6 6 12 0M106 170q6 6 12 0"/></g>
+<path d="M62 96C32 112 28 160 48 176C58 160 62 130 66 112Z" fill="#1F5FCC"/>
+<path d="M138 120C150 110 160 92 168 66" stroke="#1F5FCC" stroke-width="26" stroke-linecap="round" fill="none"/>
+<g transform="rotate(24 172 66)"><rect x="165" y="6" width="14" height="66" rx="3" fill="#FFD23F"/><path d="M165 72h14l-7 18z" fill="#F5D7A8"/><path d="M169.5 82h5l-2.5 8z" fill="#2A2438"/><rect x="165" y="6" width="14" height="10" rx="3" fill="#FF8FA3"/><rect x="165" y="16" width="14" height="5" fill="#B0B8C8"/></g>
+<circle cx="172" cy="68" r="11" fill="#2F7BEA"/>
+<circle cx="100" cy="86" r="54" fill="#2F7BEA"/>
+<path d="M58 60L52 28L82 46Z" fill="#1F5FCC"/><path d="M142 60L148 28L118 46Z" fill="#1F5FCC"/>
+<circle cx="76" cy="88" r="23" fill="#fff"/><circle cx="124" cy="88" r="23" fill="#fff"/>
+<circle cx="79" cy="91" r="11" fill="#102A5C"/><circle cx="121" cy="91" r="11" fill="#102A5C"/>
+<circle cx="83" cy="86" r="4" fill="#fff"/><circle cx="125" cy="86" r="4" fill="#fff"/>
+<path d="M100 98l-10 14h20z" fill="#FFB020"/>
+<ellipse cx="60" cy="110" rx="7" ry="4" fill="#FF8FA3" opacity=".6"/><ellipse cx="140" cy="110" rx="7" ry="4" fill="#FF8FA3" opacity=".6"/>
+<ellipse cx="100" cy="42" rx="40" ry="13" fill="#FFD23F"/>
+<path d="M66 44Q100 6 134 44Z" fill="#FFD23F"/>
+<path d="M66 44Q100 6 134 44" stroke="#C99A00" stroke-width="3" fill="none"/>
+<path d="M100 18l3.6 7.4 8 1.2-5.8 5.6 1.4 8-7.2-3.8-7.2 3.8 1.4-8-5.8-5.6 8-1.2z" fill="#FF8A1F"/>
+</symbol>
+</svg>
+
+<main class="wrap">
+
+<!-- HALAMAN 1: MENU UTAMA -->
+<section class="screen" id="screen-menu" aria-labelledby="t-menu">
+  <div class="menu">
+    <div>
+      <span class="eyebrow">Bahasa Melayu &middot; Tahun 3</span>
+      <h1 class="title" id="t-menu" data-focus><span class="hl">MISI BINA AYAT</span><br><span class="stamp">CIKGU ZAFRI</span></h1>
+      <p class="ask">Sedia untuk menjadi juara bina ayat?</p>
+      <div class="menu-btns">
+        <button class="btn big" id="btnMula" type="button">MULA MISI</button>
+        <button class="btn sun" id="btnCara" type="button">CARA BERMAIN</button>
+        <button class="btn ghost" id="btnKredit" type="button">KREDIT</button>
+      </div>
+    </div>
+    <div class="menu-art" aria-hidden="true">
+      <svg class="owl-big" viewBox="0 0 200 220"><use href="#owl" width="200" height="220"/></svg>
+      <div class="floater f-s">Ibu<small>SUBJEK</small></div>
+      <div class="floater f-k">memasak<small>KATA KERJA</small></div>
+      <div class="floater f-o">nasi<small>OBJEK</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- HALAMAN 2: CARA BERMAIN -->
+<section class="screen" id="screen-cara" hidden aria-labelledby="t-cara">
+  <div class="panel narrow">
+    <div class="panel-head">
+      <svg class="owl-sm" viewBox="0 0 200 220" aria-hidden="true"><use href="#owl" width="200" height="220"/></svg>
+      <h2 id="t-cara" data-focus>Cara Bermain</h2>
+    </div>
+    <ol class="steps">
+      <li>Lihat gambar yang diberikan.</li>
+      <li>Kenal pasti siapa atau apa yang terdapat dalam gambar.</li>
+      <li>Bina ayat menggunakan teknik SKOP.</li>
+      <li>Semak jawapan anda.</li>
+      <li>Kumpulkan markah dan lengkapkan semua misi.</li>
+    </ol>
+    <h3>Teknik SKOP</h3>
+    <div class="skop">
+      <div class="tile s"><b><i>S</i>Subjek</b><p>Siapa atau apa yang melakukan perbuatan?</p></div>
+      <div class="tile k"><b><i>K</i>Kata kerja</b><p>Apakah perbuatan itu?</p></div>
+      <div class="tile o"><b><i>O</i>Objek</b><p>Apakah benda yang terlibat?</p></div>
+      <div class="tile p"><b><i>P</i>Peluasan</b><p>Di mana? Bila? Bagaimana?</p></div>
+    </div>
+    <div class="row-btns">
+      <button class="btn big" id="btnCaraMula" type="button">MULA MISI</button>
+      <button class="btn ghost" id="btnCaraKembali" type="button">KEMBALI</button>
+    </div>
+  </div>
+</section>
+
+<!-- KREDIT -->
+<section class="screen" id="screen-kredit" hidden aria-labelledby="t-kredit">
+  <div class="panel narrow">
+    <div class="panel-head">
+      <svg class="owl-sm" viewBox="0 0 200 220" aria-hidden="true"><use href="#owl" width="200" height="220"/></svg>
+      <h2 id="t-kredit" data-focus>Kredit</h2>
+    </div>
+    <ul class="credit-list">
+      <li><span>Permainan</span>Misi Bina Ayat Cikgu Zafri</li>
+      <li><span>Idea dan kandungan pembelajaran</span>Cikgu Zafri</li>
+      <li><span>Pembangunan permainan</span>Dibina dengan bantuan Claude (Anthropic)</li>
+      <li><span>Maskot</span>Ejen Kata, burung hantu asli yang dilukis khas untuk permainan ini</li>
+      <li><span>Ilustrasi soalan</span>Dilukis khas, tiada watak berhak cipta</li>
+    </ul>
+    <div class="row-btns"><button class="btn ghost" id="btnKreditKembali" type="button">KEMBALI</button></div>
+  </div>
+</section>
+
+<!-- HALAMAN 3: PERMAINAN -->
+<section class="screen" id="screen-game" hidden aria-label="Permainan bina ayat">
+  <div class="bar-wrap">
+    <div class="status">
+      <div class="status-row">
+        <button class="btn mini" id="btnKeluar" type="button">KELUAR</button>
+        <p class="qlabel" id="qLabel" aria-live="polite">Soalan 1 daripada 10</p>
+        <p class="score">Markah <b id="score">0</b></p>
+      </div>
+      <div class="bar" id="bar" role="progressbar" aria-label="Kemajuan misi" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><i id="barFill"></i></div>
+    </div>
+  </div>
+
+  <div class="play">
+    <article class="scene-card">
+      <span class="tag">Soalan <span id="qNum">1</span></span>
+      <div class="scene" id="scene"></div>
+      <div class="task">
+        <svg class="owl-sm" viewBox="0 0 200 220" aria-hidden="true"><use href="#owl" width="200" height="220"/></svg>
+        <p id="arahan" data-focus tabindex="-1">Lihat gambar dengan teliti. Siapakah yang ada di dalam gambar? Apakah yang dia lakukan? Taip satu ayat.</p>
+      </div>
+    </article>
+
+    <div class="work">
+      <label for="jawapan">Tulis ayat kamu di sini</label>
+      <div class="paper">
+        <textarea id="jawapan" lang="ms" rows="5" maxlength="220" enterkeyhint="done" autocomplete="off" autocapitalize="sentences" spellcheck="false" placeholder="Contoh: Siapa + buat apa + apa."></textarea>
+      </div>
+      <div class="actions">
+        <button class="btn" id="btnSemak" type="button">SEMAK JAWAPAN</button>
+        <button class="btn sun" id="btnPetunjuk" type="button">PETUNJUK</button>
+        <button class="btn ghost" id="btnSkop" type="button" aria-expanded="false" aria-controls="skopCard">LIHAT SKOP</button>
+      </div>
+      <div class="skop" id="skopCard" hidden>
+        <div class="tile s"><b><i>S</i>Subjek</b><p>Siapa atau apa?</p></div>
+        <div class="tile k"><b><i>K</i>Kata kerja</b><p>Buat apa?</p></div>
+        <div class="tile o"><b><i>O</i>Objek</b><p>Benda apa?</p></div>
+        <div class="tile p"><b><i>P</i>Peluasan</b><p>Di mana? Bila? Bagaimana?</p></div>
+      </div>
+      <ol class="hints" id="hints" aria-live="polite"></ol>
+      <div id="feedback" role="status" aria-live="polite"></div>
+      <div class="after" id="after" hidden>
+        <button class="btn" id="btnNext" type="button">SOALAN SETERUSNYA</button>
+      </div>
+      <div class="after" id="skipBox" hidden>
+        <button class="btn ghost" id="btnSkip" type="button">LANGKAU SOALAN</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HALAMAN 6: KEPUTUSAN AKHIR -->
+<section class="screen" id="screen-result" hidden aria-labelledby="t-result">
+  <div class="panel result">
+    <h2 class="ribbon" id="t-result" data-focus>TAHNIAH, MISI SELESAI!</h2>
+    <div class="ring" id="ring"><div id="resScore">0</div></div>
+    <p class="cat" id="resCat"></p>
+    <p class="cat-msg" id="resMsg"></p>
+    <div class="stats">
+      <div class="stat"><span>Jumlah markah</span><b id="stScore">0/100</b></div>
+      <div class="stat"><span>Soalan betul</span><b id="stRight">0/10</b></div>
+      <div class="stat"><span>Pencapaian</span><b id="stPct">0%</b></div>
+    </div>
+    <div class="review" id="review" aria-label="Ringkasan 10 soalan"></div>
+    <div class="actions-end">
+      <button class="btn big" id="btnAgain" type="button">MAIN SEMULA</button>
+      <button class="btn ghost" id="btnHome" type="button">KEMBALI KE MENU UTAMA</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+/* ===== ENJIN SEMAKAN AYAT (SKOP) ===== */
+var BA=(function(){
+'use strict';
+
+/* Senarai nama boleh ditambah di sini oleh guru. */
+var NAMES_M=['ali','abu','ahmad','amir','aiman','adam','danish','daniel','farhan','hafiz','haikal','irfan','iman','zafri','rizal','syafiq','azim','arif','ravi','kumar','muthu','wei','jun','hakim','izzat','faiz','fikri','nazmi'];
+var NAMES_F=['siti','aisyah','aina','balqis','sarah','farah','huda','nurul','nur','alya','alia','sofea','sofia','mei','ling','lina','kavitha','devi','amira','atiqah','hannah','zara','dania','qistina','maisarah','husna','irdina','natasha'];
+
+var DET_S=['seorang','sorang','si','dua','tiga','orang','para'];
+var AFTER_S=['itu','ini','tersebut'];
+var DET_O=['sebuah','seekor','sebatang','sebiji','sebungkus','seikat','sepohon','sebuku','sebelah','sehelai','sepasang','satu','dua','beberapa','banyak','yang','itu','ini','si','sedikit','segelas'];
+var FILL=['sedang','sudah','telah','akan','masih','itu','ini','tersebut','yang','oleh','seorang','si','kepada','lagi','pun'];
+
+var GEN={
+  s:'Perhatikan subjek. Siapakah yang berada di dalam gambar?',
+  k:'Perhatikan kata kerja. Apakah yang sedang dilakukan?',
+  o:'Perhatikan objek. Apakah benda yang terlibat dalam perbuatan itu?',
+  order:'Semua bahagian penting sudah ada, tetapi susunannya belum betul. Mulakan dengan subjek, kemudian kata kerja, kemudian objek.',
+  forbid:'Lihat gambar semula. Adakah subjek dalam gambar lelaki atau perempuan?',
+  asing:'Ayat kamu belum sepadan dengan gambar. Lihat gambar dengan teliti, kemudian cari siapa, apa perbuatannya dan apa objeknya.'
+};
+
+var Q=[
+ { /* 1 */
+  S:['budak lelaki','budak','kanak kanak lelaki','kanak kanak','murid lelaki','murid','anak lelaki','anak','adik','abang','lelaki','dia','beliau','pelajar'],
+  names:'m', forbid:['perempuan','gadis','kakak','puteri','ibu'],
+  V:['membaca','baca','menelaah'], PV:['dibaca'],
+  O:['buku','bukunya','komik','novel','majalah','cerita','kitab'],
+  hints:[
+   'Siapakah yang melakukan perbuatan? Lihat orang di dalam gambar. Dia seorang budak lelaki.',
+   'Apakah perbuatan yang dilakukan? Matanya melihat tulisan pada muka surat. Kata kerjanya bermula dengan huruf M.',
+   'Apakah objek yang terlibat? Benda yang dipegang di hadapannya ialah buku.',
+   'Bagaimanakah kita boleh meluaskan ayat? Beritahu tempat atau cara. Contoh: di bawah pokok, dengan tekun.'],
+  example:'Seorang budak lelaki membaca buku di bawah pokok.'
+ },
+ { /* 2 */
+  S:['budak perempuan','budak','kanak kanak perempuan','kanak kanak','murid perempuan','murid','anak perempuan','anak','adik','kakak','perempuan','gadis','dia','beliau','puteri'],
+  names:'f', forbid:['lelaki','abang','ayah','putera','bapa'],
+  V:['menyiram','menyirami','menyiramkan','siram'], PV:['disiram','disirami','disiramkan'],
+  O:['bunga','pokok','tanaman','taman','kebun','pasu'],
+  hints:[
+   'Siapakah yang melakukan perbuatan? Dia seorang budak perempuan yang berkuncir dua.',
+   'Apakah perbuatan yang dilakukan? Air keluar daripada bekas di tangannya. Kata kerjanya bermula dengan huruf M.',
+   'Apakah objek yang terlibat? Air itu jatuh pada tumbuhan yang berwarna-warni, iaitu bunga.',
+   'Bagaimanakah kita boleh meluaskan ayat? Beritahu tempat atau masa. Contoh: di taman, pada waktu pagi.'],
+  example:'Seorang budak perempuan menyiram bunga di taman.'
+ },
+ { /* 3 */
+  S:['murid','murid lelaki','pelajar','budak lelaki','budak','kanak kanak','anak','adik','abang','lelaki','dia','beliau','pemain'],
+  names:'mf',
+  V:['menendang','menyepak','tendang','sepak','bermain','main','menyepakkan','menendangkan'], PV:['ditendang','disepak'],
+  O:['bola','bola sepak','bolanya'],
+  hints:[
+   'Siapakah yang melakukan perbuatan? Dia seorang murid yang memakai baju sukan.',
+   'Apakah perbuatan yang dilakukan? Kakinya dihayunkan ke arah bola. Kata kerjanya bermula dengan huruf M.',
+   'Apakah objek yang terlibat? Benda bulat yang terbang itu ialah bola.',
+   'Bagaimanakah kita boleh meluaskan ayat? Beritahu tempat atau cara. Contoh: di padang, dengan kuat.'],
+  example:'Seorang murid menendang bola di padang.'
+ },
+ { /* 4 */
+  S:['ibu','emak','mak','mama','mami','umi','ummi','bonda','ibuku','ibunya','emakku','emaknya','makku','maknya','mamaku','wanita','perempuan','mak cik','makcik','dia','beliau'],
+  names:'', forbid:['ayah','bapa','abah','papa','lelaki'],
+  V:['memasak','masak','menanak','tanak','memasakkan'], PV:['dimasak','ditanak','dimasakkan'],
+  O:['nasi','beras','bubur'],
+  hints:[
+   'Siapakah yang melakukan perbuatan? Dia memakai tudung dan berada di dapur. Dia ialah ibu.',
+   'Apakah perbuatan yang dilakukan? Dia mengacau periuk di atas dapur. Kata kerjanya bermula dengan huruf M.',
+   'Apakah objek yang terlibat? Makanan putih di dalam periuk itu ialah nasi.',
+   'Bagaimanakah kita boleh meluaskan ayat? Beritahu tempat atau tujuan. Contoh: di dapur, untuk makan tengah hari.'],
+  example:'Ibu memasak nasi di dapur.'
+ },
+ { /* 5 */
+  S:['ayah','bapa','abah','papa','ayahanda','ayahku','ayahnya','bapaku','bapanya','abahku','abahnya','lelaki','pak cik','pakcik','dia','beliau'],
+  names:'', forbid:['ibu','emak','mak','mama','perempuan','wanita','kakak'],
+  V:['membasuh','basuh','mencuci','cuci','membersihkan','menggosok'], PV:['dibasuh','dicuci','dibersihkan','digosok'],
+  O:['kereta','keretanya','kenderaan','van','motokar'],
+  hints:[
+   'Siapakah yang melakukan perbuatan? Dia lelaki dewasa yang berkumis. Anak-anak memanggilnya ayah.',
+   'Apakah perbuatan yang dilakukan? Dia menggosok dengan span yang berbuih. Kata kerjanya bermula dengan huruf M.',
+   'Apakah objek yang terlibat? Benda besar yang berbuih itu ialah kereta.',
+   'Bagaimanakah kita boleh meluaskan ayat? Beritahu tempat atau masa. Contoh: di halaman rumah, pada hari Sabtu.'],
+  example:'Ayah membasuh kereta di halaman rumah.'
+ },
+ { /* 6 */
+  S:['murid','murid perempuan','pelajar','budak perempuan','budak','kanak kanak','anak','adik','kakak','perempuan','gadis','dia','beliau'],
+  names:'mf',
+  V:['menyapu','sapu','menyapukan','membersihkan','mengemas'], PV:['disapu','dibersihkan','dikemas'],
+  O:['lantai','kelas','bilik','sampah','habuk','debu'],
+  hints:[
+   'Siapakah yang melakukan perbuatan? Dia seorang murid yang memakai tudung putih dan berada di dalam kelas.',
+   'Apakah perbuatan yang dilakukan? Dia menggerakkan penyapu ke depan dan ke belakang. Kata kerjanya bermula dengan huruf M.',
+   'Apakah objek yang terlibat? Bahagian kelas yang disapu itu ialah lantai.',
+   'Bagaimanakah kita boleh meluaskan ayat? Beritahu masa atau cara. Contoh: selepas waktu sekolah, dengan rajin.'],
+  example:'Seorang murid menyapu lantai kelas.'
+ },
+ { /* 7 */
+  pair:true,
+  S:['budak lelaki','budak perempuan','murid lelaki','murid perempuan','murid','budak','pelajar','kawan','rakan','sahabat','abang','kakak','adik'],
+  SP:['dua orang murid','dua murid','dua orang budak','dua budak','dua orang kanak kanak','dua kanak kanak','dua orang pelajar','dua pelajar','dua orang kawan','dua kawan','dua orang rakan','dua rakan','dua orang sahabat','dua sahabat','dua beradik','dua orang adik beradik','mereka','murid murid','budak budak','kanak kanak','pelajar pelajar','kawan kawan','rakan rakan','dua orang','kedua dua murid','kedua dua budak'],
+  names:'mf',
+  V:['bermain','main','memain','memainkan'], PV:[],
+  O:['badminton','bulu tangkis','bulutangkis'],
+  fb:{s:'Perhatikan subjek. Berapa orang yang sedang bermain di dalam gambar?'},
+  hints:[
+   'Siapakah yang melakukan perbuatan? Ada dua orang di kiri dan kanan jaring. Seorang lelaki dan seorang perempuan.',
+   'Apakah perbuatan yang dilakukan? Mereka memegang raket dan memukul bulu tangkis. Kata kerjanya bermula dengan huruf B.',
+   'Apakah objek yang terlibat? Permainan dengan raket dan bulu tangkis itu ialah badminton.',
+   'Bagaimanakah kita boleh meluaskan ayat? Beritahu tempat atau cara. Contoh: di gelanggang, dengan gembira.'],
+  example:'Dua orang murid bermain badminton di gelanggang.'
+ },
+ { /* 8 */
+  S:['budak perempuan','budak','kanak kanak perempuan','kanak kanak','murid perempuan','anak perempuan','adik','kakak','perempuan','gadis','dia','beliau','puteri'],
+  names:'f', forbid:['lelaki','abang','ayah','putera'],
+  V:['memberi makan','memberikan makan','memberi','memberikan','beri','menyuap','menyuapkan','menghulurkan','menghulur'], PV:['diberi','diberikan','disuap'],
+  O:['makanan','kucing','ikan','kucingnya','susu'],
+  hints:[
+   'Siapakah yang melakukan perbuatan? Dia seorang budak perempuan yang duduk mencangkung.',
+   'Apakah perbuatan yang dilakukan? Dia meletakkan mangkuk berisi makanan. Kata kerjanya bermula dengan huruf M.',
+   'Apakah objek yang terlibat? Haiwan berbulu oren yang sedang makan itu ialah kucing.',
+   'Bagaimanakah kita boleh meluaskan ayat? Beritahu tempat atau masa. Contoh: di halaman, setiap petang.'],
+  example:'Seorang budak perempuan memberi makanan kepada kucing.'
+ },
+ { /* 9 */
+  S:['pekebun','tukang kebun','petani','lelaki','pak cik','pakcik','pak','atuk','datuk','dia','beliau','orang','lelaki tua'],
+  names:'',
+  V:['menanam','tanam','menanamkan','menyemai'], PV:['ditanam','ditanamkan'],
+  O:['pokok','pohon','benih','tanaman'],
+  hints:[
+   'Siapakah yang melakukan perbuatan? Dia memakai topi jerami dan bekerja di kebun. Dia ialah pekebun.',
+   'Apakah perbuatan yang dilakukan? Dia memasukkan anak pokok ke dalam lubang. Kata kerjanya bermula dengan huruf M.',
+   'Apakah objek yang terlibat? Tumbuhan kecil berdaun hijau itu ialah pokok.',
+   'Bagaimanakah kita boleh meluaskan ayat? Beritahu tempat atau cara. Contoh: di kebun, dengan teliti.'],
+  example:'Seorang pekebun menanam pokok di kebun.'
+ },
+ { /* 10 */
+  S:['murid','murid lelaki','pelajar','budak lelaki','budak','kanak kanak','anak','adik','abang','lelaki','dia','beliau'],
+  names:'mf',
+  V:['menyusun','susun','mengatur','menyusunkan','mengemas','menyimpan','meletakkan','menyusun atur'], PV:['disusun','diatur','disimpan','diletakkan'],
+  O:['buku','bukunya','komik','novel'],
+  hints:[
+   'Siapakah yang melakukan perbuatan? Dia seorang murid lelaki yang memegang timbunan buku.',
+   'Apakah perbuatan yang dilakukan? Dia meletakkan buku satu demi satu di rak. Kata kerjanya bermula dengan huruf M.',
+   'Apakah objek yang terlibat? Benda yang diletakkan di rak itu ialah buku.',
+   'Bagaimanakah kita boleh meluaskan ayat? Beritahu tempat atau cara. Contoh: di perpustakaan, dengan kemas.'],
+  example:'Seorang murid menyusun buku di rak.'
+ }
+];
+
+function cp(list){
+  return (list||[]).map(function(s){return s.toLowerCase().split(/[\s\-]+/).filter(Boolean);});
+}
+Q.forEach(function(q){
+  q.cS=cp(q.S);q.cV=cp(q.V);q.cPV=cp(q.PV);q.cO=cp(q.O);q.cSP=cp(q.SP);
+  var nm=[];
+  if(q.names.indexOf('m')>-1) nm=nm.concat(NAMES_M);
+  if(q.names.indexOf('f')>-1) nm=nm.concat(NAMES_F);
+  q.cN=cp(nm);
+  q.fbm={};
+  for(var k in GEN) q.fbm[k]=(q.fb&&q.fb[k])||GEN[k];
+});
+
+function near(a,b){
+  if(a===b) return true;
+  var la=a.length,lb=b.length;
+  if(Math.abs(la-lb)>1) return false;
+  var i=0,j=0,d=0;
+  while(i<la&&j<lb){
+    if(a.charAt(i)===b.charAt(j)){i++;j++;continue;}
+    if(++d>1) return false;
+    if(la>lb) i++; else if(lb>la) j++; else {i++;j++;}
+  }
+  if(i<la||j<lb) d++;
+  return d<=1;
+}
+
+function tokenize(text){
+  var raw=String(text||'').trim().split(/\s+/).filter(Boolean);
+  var toks=[];
+  raw.forEach(function(w,wi){
+    var c=w.toLowerCase().replace(/[^a-zà-ɏ\-]/g,'').replace(/^-+|-+$/g,'');
+    c.split('-').forEach(function(p){if(p) toks.push({t:p,w:wi});});
+  });
+  return {raw:raw,toks:toks};
+}
+
+function find(tk,phr,fuzzy){
+  var out=[];
+  for(var i=0;i<tk.length;i++){
+    for(var p=0;p<phr.length;p++){
+      var ph=phr[p];
+      if(i+ph.length>tk.length) continue;
+      var ok=true,fx=[];
+      for(var j=0;j<ph.length;j++){
+        var a=tk[i+j],b=ph[j];
+        if(a===b) continue;
+        if(fuzzy&&b.length>=6&&near(a,b)){fx.push({typed:a,right:b});continue;}
+        ok=false;break;
+      }
+      if(ok) out.push({s:i,e:i+ph.length,fx:fx});
+    }
+  }
+  return out;
+}
+
+function subjects(q,tk,fuzzy){
+  var singles=find(tk,q.cS,fuzzy).concat(find(tk,q.cN,fuzzy));
+  if(!q.pair) return singles;
+  var out=find(tk,q.cSP,fuzzy);
+  singles.forEach(function(m){
+    var j=m.e;
+    if(tk[j]==='dan'){
+      j++;
+      if(tk[j]==='seorang') j++;
+      singles.forEach(function(m2){
+        if(m2.s===j) out.push({s:m.s,e:m2.e,fx:m.fx.concat(m2.fx)});
+      });
+    }
+  });
+  return out;
+}
+
+function hasDan(tk,a,b){
+  for(var i=a;i<b;i++) if(tk[i]==='dan') return true;
+  return false;
+}
+
+function structure(q,tk,fuzzy){
+  var Ss=subjects(q,tk,fuzzy),Ks=find(tk,q.cV,fuzzy),Os=find(tk,q.cO,fuzzy),PVs=find(tk,q.cPV,fuzzy);
+  var a,b,c,d;
+  for(a=0;a<Ss.length;a++){
+    var s=Ss[a];
+    for(b=0;b<Ks.length;b++){
+      var k=Ks[b];
+      if(k.s<s.e||k.s-s.e>5||hasDan(tk,s.e,k.s)) continue;
+      for(c=0;c<Os.length;c++){
+        var o=Os[c];
+        if(o.s>=k.e&&o.s-k.e<=4) return {s:s,k:k,o:o,type:'aktif',S:Ss,K:Ks,O:Os,PV:PVs};
+      }
+    }
+  }
+  for(c=0;c<Os.length;c++){
+    var o2=Os[c];
+    for(d=0;d<PVs.length;d++){
+      var pv=PVs[d];
+      if(pv.s<o2.e||pv.s-o2.e>3) continue;
+      for(a=0;a<Ss.length;a++){
+        var s2=Ss[a];
+        if(s2.s>=pv.e&&s2.s-pv.e<=3) return {s:s2,k:pv,o:o2,type:'pasif',S:Ss,K:Ks,O:Os,PV:PVs};
+      }
+    }
+  }
+  return {fail:true,S:Ss,K:Ks,O:Os,PV:PVs};
+}
+
+function buildRoles(tk,st){
+  var r=[],i;
+  for(i=0;i<tk.length;i++) r.push('P');
+  function mark(m,c){for(var x=m.s;x<m.e;x++) r[x]=c;}
+  mark(st.s,'S');mark(st.k,'K');mark(st.o,'O');
+  i=st.s.s-1;
+  while(i>=0&&r[i]==='P'&&DET_S.indexOf(tk[i])>-1){r[i]='S';i--;}
+  i=st.s.e;
+  while(i<tk.length&&r[i]==='P'&&AFTER_S.indexOf(tk[i])>-1){r[i]='S';i++;}
+  i=st.o.s-1;
+  while(i>=0&&r[i]==='P'&&DET_O.indexOf(tk[i])>-1){r[i]='O';i--;}
+  return r;
+}
+
+function toWords(T,roles){
+  var words=T.raw.map(function(w){return {text:w,role:null};});
+  T.toks.forEach(function(t,i){
+    if(words[t.w].role===null) words[t.w].role=roles[i];
+  });
+  var prev='P';
+  words.forEach(function(w){
+    if(w.role===null) w.role=prev;
+    prev=w.role;
+  });
+  return words;
+}
+
+function check(qi,text){
+  var q=Q[qi],clean=String(text||'').trim();
+  if(!clean) return {ok:false,code:'kosong',msg:'Taip ayat kamu dahulu, ejen!'};
+  var T=tokenize(clean),tk=T.toks.map(function(t){return t.t;});
+  if(tk.length<3) return {ok:false,code:'pendek',msg:'Ayat kamu belum lengkap. Ayat yang baik ada subjek, kata kerja dan objek.'};
+  if(tk.length>30) return {ok:false,code:'panjang',msg:'Ayat kamu terlalu panjang. Cuba tulis ayat yang lebih pendek.'};
+
+  var st=structure(q,tk,false),fuzzy=false;
+  if(st.fail){
+    var st2=structure(q,tk,true);
+    if(!st2.fail){st=st2;fuzzy=true;}
+  }
+  if(st.fail){
+    var hasS=st.S.length>0,hasK=(st.K.length+st.PV.length)>0,hasO=st.O.length>0;
+    var code,msg;
+    if(!hasS&&!hasK&&!hasO){code='asing';msg=q.fbm.asing;}
+    else if(!hasS){code='subjek';msg=q.fbm.s;}
+    else if(!hasK){code='kata_kerja';msg=q.fbm.k;}
+    else if(!hasO){code='objek';msg=q.fbm.o;}
+    else {code='susunan';msg=q.fbm.order;}
+    return {ok:false,code:code,msg:msg};
+  }
+  if(q.forbid){
+    var lo=Math.max(0,st.s.s-2),hi=Math.min(tk.length,st.s.e+2);
+    for(var i=lo;i<hi;i++){
+      if(q.forbid.indexOf(tk[i])>-1) return {ok:false,code:'jantina',msg:q.fbm.forbid};
+    }
+  }
+  var roles=buildRoles(tk,st);
+  var ext=0;
+  roles.forEach(function(r,i){if(r==='P'&&FILL.indexOf(tk[i])===-1) ext++;});
+  var fixes=st.s.fx.concat(st.k.fx,st.o.fx);
+  var tips=[];
+  if(fixes.length) tips.push('Periksa ejaan: tulis ‘'+fixes[0].right+'’, bukan ‘'+fixes[0].typed+'’.');
+  var first=clean.charAt(0),last=clean.charAt(clean.length-1);
+  var capOk=first!==first.toLowerCase();
+  var endOk=/[.!?]/.test(last);
+  if(!capOk||!endOk) tips.push('Ingat: mulakan ayat dengan huruf besar dan tamatkan dengan tanda noktah.');
+  return {ok:true,code:'betul',words:toWords(T,roles),extension:ext>0,tips:tips,type:st.type,fuzzy:fuzzy};
+}
+
+return {Q:Q,check:check,tokenize:tokenize};
+})();
+</script>
+
+<script>
+/* ===== ANTARA MUKA DAN PERMAINAN ===== */
+(function(){
+'use strict';
+
+function $(id){return document.getElementById(id);}
+var reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+var TOTAL=BA.Q.length;
+
+/* ---------- Ilustrasi ---------- */
+var SK='#F2C294',SK2='#C98F5B',SK3='#E3A672';
+
+function sky(c){return '<rect width="320" height="220" fill="'+(c||'#CFE8FF')+'"/>';}
+function sunS(x,y){return '<circle cx="'+x+'" cy="'+y+'" r="22" fill="#FFE98A" opacity=".7"/><circle cx="'+x+'" cy="'+y+'" r="15" fill="#FFD23F"/>';}
+function cloud(x,y,k){k=k||1;return '<g transform="translate('+x+' '+y+') scale('+k+')" fill="#fff"><ellipse cx="0" cy="0" rx="22" ry="9"/><ellipse cx="14" cy="-6" rx="14" ry="9"/><ellipse cx="-12" cy="-4" rx="12" ry="8"/></g>';}
+function grass(y){return '<rect y="'+y+'" width="320" height="'+(220-y)+'" fill="#8FD36B"/><path d="M0 '+y+'Q40 '+(y-9)+' 80 '+y+'T160 '+y+'T240 '+y+'T320 '+y+'V'+(y+7)+'H0Z" fill="#A9E384"/>';}
+function shadow(x,y,rx){return '<ellipse cx="'+x+'" cy="'+y+'" rx="'+rx+'" ry="5" fill="#000" opacity=".13"/>';}
+function pts(a){return a.map(function(p){return p[0]+','+p[1];}).join(' ');}
+function pl(a,col,w){return '<polyline points="'+pts(a)+'" fill="none" stroke="'+col+'" stroke-width="'+w+'" stroke-linecap="round" stroke-linejoin="round"/>';}
+
+function person(o){
+  var x=o.x,y=o.y,sk=o.skin||SK,ink='#2A2438',s='',lw=o.lw||11;
+  s+=(o.back||'');
+  (o.legs||[]).forEach(function(l){
+    if(o.legSkin){s+=pl(l,sk,lw-2);}
+    else if(o.shorts){
+      var m=[(l[0][0]+l[1][0])/2,(l[0][1]+l[1][1])/2];
+      s+=pl(l,sk,lw-3)+pl([l[0],m],o.pants,lw);
+    }else{s+=pl(l,o.pants,lw);}
+    var f=l[l.length-1];
+    s+='<ellipse cx="'+(f[0]+2)+'" cy="'+(f[1]+1)+'" rx="9" ry="5" fill="'+(o.shoe||'#2B3A67')+'"/>';
+  });
+  var t=y+13,b=y+50;
+  if(o.dress){
+    s+='<path d="M'+(x-15)+' '+(t+5)+'Q'+(x-15)+' '+t+' '+(x-8)+' '+t+'H'+(x+8)+'Q'+(x+15)+' '+t+' '+(x+15)+' '+(t+5)+'L'+(x+25)+' '+o.hem+'H'+(x-25)+'Z" fill="'+o.dress+'"/>';
+    s+='<ellipse cx="'+(x-9)+'" cy="'+(o.hem+2)+'" rx="9" ry="5" fill="#2B3A67"/><ellipse cx="'+(x+9)+'" cy="'+(o.hem+2)+'" rx="9" ry="5" fill="#2B3A67"/>';
+  }else{
+    s+='<rect x="'+(x-15)+'" y="'+t+'" width="30" height="'+(b-t+4)+'" rx="11" fill="'+o.shirt+'"/>';
+    if(o.skirt) s+='<path d="M'+(x-15)+' '+(b-8)+'H'+(x+15)+'L'+(x+23)+' '+o.skirtHem+'H'+(x-23)+'Z" fill="'+o.skirt+'"/>';
+  }
+  var sleeve=o.dress||o.shirt;
+  (o.arms||[]).forEach(function(a){
+    if(o.longSleeve){s+=pl(a,sleeve,9.5);}
+    else{s+=pl(a,sk,7)+pl([a[0],a[1]],sleeve,9.5);}
+    var h=a[a.length-1];
+    s+='<circle cx="'+h[0]+'" cy="'+h[1]+'" r="5.2" fill="'+sk+'"/>';
+  });
+  var hc=o.hairC||'#3B2A20',st=o.hair||'short';
+  var shortHair='<path d="M'+(x-15.5)+' '+(y+1)+'C'+(x-17)+' '+(y-17)+' '+(x+17)+' '+(y-17)+' '+(x+15.5)+' '+(y+1)+'Q'+(x+9)+' '+(y-8)+' '+x+' '+(y-8)+'Q'+(x-9)+' '+(y-8)+' '+(x-15.5)+' '+(y+1)+'Z" fill="'+hc+'"/>';
+  var face='<circle cx="'+x+'" cy="'+y+'" r="15" fill="'+sk+'"/>';
+  if(st==='tudung'){
+    face='<path d="M'+(x-18)+' '+(y+4)+'C'+(x-21)+' '+(y-23)+' '+(x+21)+' '+(y-23)+' '+(x+18)+' '+(y+4)+'L'+(x+22)+' '+(y+31)+'Q'+x+' '+(y+38)+' '+(x-22)+' '+(y+31)+'Z" fill="'+(o.tudungC||'#fff')+'" stroke="#00000018" stroke-width="1"/><ellipse cx="'+x+'" cy="'+(y+3)+'" rx="12.5" ry="13.5" fill="'+sk+'"/>';
+  }
+  s+=face;
+  var ey=y+(o.look==='down'?3.2:1.6);
+  s+='<circle cx="'+(x-5.5)+'" cy="'+ey+'" r="1.9" fill="'+ink+'"/><circle cx="'+(x+5.5)+'" cy="'+ey+'" r="1.9" fill="'+ink+'"/>';
+  s+='<path d="M'+(x-4)+' '+(y+6.8)+'Q'+x+' '+(y+10.8)+' '+(x+4)+' '+(y+6.8)+'" stroke="'+ink+'" stroke-width="1.6" fill="none" stroke-linecap="round"/>';
+  s+='<circle cx="'+(x-9.5)+'" cy="'+(y+6)+'" r="2.6" fill="#FF8FA3" opacity=".5"/><circle cx="'+(x+9.5)+'" cy="'+(y+6)+'" r="2.6" fill="#FF8FA3" opacity=".5"/>';
+  if(o.mustache) s+='<path d="M'+(x-6)+' '+(y+5)+'Q'+x+' '+(y+2.6)+' '+(x+6)+' '+(y+5)+'Q'+x+' '+(y+4.2)+' '+(x-6)+' '+(y+5)+'Z" fill="#2A2438"/>';
+  if(st==='short') s+=shortHair;
+  if(st==='pigtails'){
+    s+=shortHair+'<circle cx="'+(x-19)+'" cy="'+(y+3)+'" r="6.5" fill="'+hc+'"/><circle cx="'+(x+19)+'" cy="'+(y+3)+'" r="6.5" fill="'+hc+'"/><circle cx="'+(x-16)+'" cy="'+(y-3)+'" r="3.2" fill="'+(o.ribbon||'#FF4F8B')+'"/><circle cx="'+(x+16)+'" cy="'+(y-3)+'" r="3.2" fill="'+(o.ribbon||'#FF4F8B')+'"/>';
+  }
+  if(st==='topi'){
+    s+=shortHair+'<ellipse cx="'+x+'" cy="'+(y-8)+'" rx="27" ry="6.5" fill="#E8C46A"/><path d="M'+(x-15)+' '+(y-9)+'Q'+x+' '+(y-30)+' '+(x+15)+' '+(y-9)+'Z" fill="#F2D27E"/><rect x="'+(x-15)+'" y="'+(y-13)+'" width="30" height="5" fill="#C0392B"/>';
+  }
+  s+=(o.front||'');
+  return s;
+}
+
+function svg(inner,n){return '<svg viewBox="0 0 320 220" role="img" aria-label="Gambar soalan '+n+'" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>';}
+
+var SCENES=[
+/* 1. Budak lelaki membaca buku */
+function(){
+  var g=sky()+sunS(272,38)+cloud(70,40,1)+cloud(190,64,.8)+grass(146);
+  g+='<rect x="246" y="84" width="14" height="70" rx="5" fill="#8A5A2B"/><circle cx="253" cy="70" r="34" fill="#4FAF54"/><circle cx="230" cy="88" r="22" fill="#5CBF5F"/><circle cx="278" cy="88" r="22" fill="#5CBF5F"/>';
+  g+='<g fill="#FF6FA5"><circle cx="40" cy="176" r="4"/><circle cx="64" cy="190" r="4"/></g><g fill="#FFD23F"><circle cx="270" cy="184" r="4"/><circle cx="24" cy="196" r="4"/></g>';
+  g+='<rect x="96" y="124" width="108" height="12" rx="4" fill="#B9763A"/><rect x="104" y="134" width="8" height="34" fill="#8E5726"/><rect x="188" y="134" width="8" height="34" fill="#8E5726"/>'+shadow(150,172,60);
+  var book='<g transform="translate(150 116)"><path d="M-33 -4L0 -10L33 -4L33 20L0 26L-33 20Z" fill="#D9382F"/><path d="M-30 -4L-1.5 -9.5L-1.5 22L-30 17Z" fill="#fff"/><path d="M30 -4L1.5 -9.5L1.5 22L30 17Z" fill="#fff"/><g stroke="#A9BEDF" stroke-width="2" stroke-linecap="round"><path d="M-25 2L-7 -1.5M-25 8L-7 4.5M-25 14L-7 10.5M25 2L7 -1.5M25 8L7 4.5M25 14L7 10.5"/></g></g>';
+  g+=person({x:150,y:70,hair:'short',hairC:'#2A1D16',shirt:'#F7B733',pants:'#2F5DA8',look:'down',
+    legs:[[[145,118],[143,166]],[[155,118],[157,166]]],
+    arms:[[[138,90],[126,104],[126,116]],[[162,90],[174,104],[174,116]]],
+    front:book+'<circle cx="124" cy="116" r="5.2" fill="'+SK+'"/><circle cx="176" cy="116" r="5.2" fill="'+SK+'"/>'});
+  return svg(g,1);
+},
+/* 2. Budak perempuan menyiram bunga */
+function(){
+  var g=sky()+sunS(36,38)+cloud(120,36,1)+cloud(250,60,.8)+grass(150);
+  var can='<g><rect x="140" y="88" width="34" height="26" rx="6" fill="#2BA3B8"/><path d="M146 88Q157 70 168 88" stroke="#1E7F91" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M172 104L204 84" stroke="#1E7F91" stroke-width="6" stroke-linecap="round"/><path d="M200 78L214 86L206 94Z" fill="#1E7F91"/></g>';
+  var drops='';
+  [[206,100],[212,108],[217,98],[210,120],[220,116],[214,132]].forEach(function(d){drops+='<path d="M'+d[0]+' '+(d[1]-5)+'Q'+(d[0]+4)+' '+(d[1]+1)+' '+d[0]+' '+(d[1]+4)+'Q'+(d[0]-4)+' '+(d[1]+1)+' '+d[0]+' '+(d[1]-5)+'Z" fill="#4DB3FF"/>';});
+  var fl='';
+  [[214,170,144,'#FF5A7A'],[242,170,132,'#FFD23F'],[270,170,146,'#FF8A1F']].forEach(function(f){
+    fl+='<path d="M'+f[0]+' '+f[1]+'V'+f[2]+'" stroke="#2F8F3C" stroke-width="4" stroke-linecap="round"/><path d="M'+f[0]+' '+(f[1]-14)+'q-14 -6 -16 -16q12 0 16 16z" fill="#3FAE4A"/>';
+    for(var a=0;a<6;a++){var r=a*60*Math.PI/180;fl+='<circle cx="'+(f[0]+Math.cos(r)*8).toFixed(1)+'" cy="'+(f[2]+Math.sin(r)*8).toFixed(1)+'" r="6" fill="'+f[3]+'"/>';}
+    fl+='<circle cx="'+f[0]+'" cy="'+f[2]+'" r="5" fill="#FFF3B5"/>';
+  });
+  g+='<ellipse cx="242" cy="176" rx="64" ry="9" fill="#8A5A2B"/>'+fl+shadow(100,168,34);
+  g+=person({x:98,y:70,hair:'pigtails',hairC:'#3B2A20',ribbon:'#FF4F8B',shirt:'#FF7AA8',pants:'#5B6EE1',skirt:'#5B6EE1',skirtHem:138,legSkin:true,skin:SK3,
+    back:can,
+    legs:[[[93,126],[93,164]],[[103,126],[103,164]]],
+    arms:[[[86,90],[80,106],[82,120]],[[110,90],[126,98],[146,98]]]});
+  g+=drops;
+  return svg(g,2);
+},
+/* 3. Murid menendang bola */
+function(){
+  var g=sky()+sunS(40,36)+cloud(150,34,1)+cloud(240,70,.8)+grass(140);
+  g+='<g stroke="#fff" stroke-width="4" fill="none"><path d="M268 168V108H312V168"/></g><g stroke="#fff" stroke-width="1.4" opacity=".8">';
+  for(var i=0;i<6;i++) g+='<path d="M'+(268+i*9)+' 108V168"/>';
+  for(var j=0;j<5;j++) g+='<path d="M268 '+(114+j*12)+'H312"/>';
+  g+='</g>'+shadow(112,170,38);
+  var ball='<g transform="translate(192 100)"><circle r="13" fill="#fff" stroke="#2A2438" stroke-width="2"/><path d="M0 -6L6 -2L4 5L-4 5L-6 -2Z" fill="#2A2438"/><g stroke="#2A2438" stroke-width="1.6"><path d="M0 -6V-12M6 -2L12 -4M4 5L8 10M-4 5L-8 10M-6 -2L-12 -4"/></g></g><g stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M168 96h-14M170 106h-18M172 86h-10"/></g>';
+  g+=person({x:112,y:64,hair:'short',hairC:'#1E1A1A',shirt:'#FFC324',pants:'#2F5DA8',shorts:true,shoe:'#D9382F',skin:SK3,
+    legs:[[[107,116],[105,142],[103,166]],[[118,116],[140,128],[164,116]]],
+    arms:[[[100,86],[88,94],[78,86]],[[124,86],[138,80],[146,70]]],
+    front:ball});
+  return svg(g,3);
+},
+/* 4. Ibu memasak nasi */
+function(){
+  var g='<rect width="320" height="220" fill="#FFF1D6"/>';
+  g+='<g stroke="#F3DDB4" stroke-width="2">';
+  for(var i=0;i<9;i++) g+='<path d="M'+(i*40)+' 110V220"/>';
+  for(var j=0;j<4;j++) g+='<path d="M0 '+(120+j*28)+'H320"/>';
+  g+='</g>';
+  g+='<rect x="36" y="22" width="68" height="62" rx="6" fill="#8E5726"/><rect x="42" y="28" width="56" height="50" fill="#BFE3FF"/><path d="M70 28V78M42 53H98" stroke="#8E5726" stroke-width="3"/><circle cx="56" cy="40" r="7" fill="#fff" opacity=".8"/>';
+  g+='<rect x="150" y="128" width="170" height="92" fill="#C98B4B"/><rect x="150" y="124" width="170" height="8" fill="#E3AE72"/><rect x="176" y="118" width="118" height="8" rx="3" fill="#3B4252"/><circle cx="196" cy="114" r="4" fill="#FF8A1F"/><circle cx="276" cy="114" r="4" fill="#FF8A1F"/>';
+  g+='<path d="M228 40q-8 10 0 20t0 20M246 44q-8 10 0 20t0 16M212 46q-6 8 0 16t0 14" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/>';
+  var pot='<rect x="198" y="88" width="66" height="34" rx="7" fill="#B8C4D6"/><rect x="190" y="94" width="10" height="7" rx="3" fill="#8E9BB0"/><rect x="262" y="94" width="10" height="7" rx="3" fill="#8E9BB0"/><ellipse cx="231" cy="88" rx="33" ry="8" fill="#8E9BB0"/><path d="M200 88Q231 62 262 88Z" fill="#fff"/><g fill="#E8E8F0"><circle cx="216" cy="82" r="2.4"/><circle cx="228" cy="76" r="2.4"/><circle cx="240" cy="80" r="2.4"/><circle cx="250" cy="84" r="2.4"/><circle cx="222" cy="86" r="2.4"/><circle cx="236" cy="86" r="2.4"/></g>';
+  var ladle='<path d="M168 108L212 82" stroke="#7B6F63" stroke-width="5" stroke-linecap="round"/><ellipse cx="216" cy="80" rx="9" ry="6" fill="#7B6F63" transform="rotate(-30 216 80)"/>';
+  g+=pot;
+  g+=person({x:110,y:70,hair:'tudung',tudungC:'#FF9A3D',dress:'#3E8EDE',hem:170,skin:SK2,
+    back:ladle,
+    arms:[[[122,92],[146,102],[168,108]],[[98,92],[90,108],[98,122]]]});
+  g+=shadow(110,176,34);
+  return svg(g,4);
+},
+/* 5. Ayah membasuh kereta */
+function(){
+  var g=sky()+cloud(80,32,1)+cloud(220,48,.8)+'<rect y="124" width="320" height="30" fill="#8FD36B"/><rect y="150" width="320" height="70" fill="#B9C2D0"/><path d="M0 150H320" stroke="#A1ABBB" stroke-width="3"/>';
+  g+='<path d="M126 158V132Q126 120 140 118L170 114L188 94Q192 90 200 90H250Q258 90 262 96L276 116L292 120Q302 122 302 132V158Z" fill="#E8453C"/>';
+  g+='<path d="M180 114L194 98H226V114Z" fill="#CDE9FF"/><path d="M232 98H252L266 114H232Z" fill="#CDE9FF"/><rect x="228" y="120" width="12" height="4" rx="2" fill="#B02E26"/>';
+  g+='<circle cx="162" cy="158" r="18" fill="#2A2438"/><circle cx="162" cy="158" r="8" fill="#C7CED9"/><circle cx="270" cy="158" r="18" fill="#2A2438"/><circle cx="270" cy="158" r="8" fill="#C7CED9"/>';
+  g+='<g fill="#fff" stroke="#7CC4FF" stroke-width="2"><circle cx="206" cy="92" r="8"/><circle cx="226" cy="88" r="6"/><circle cx="244" cy="92" r="7"/><circle cx="150" cy="122" r="7"/><circle cx="170" cy="118" r="5"/><circle cx="214" cy="126" r="6"/><circle cx="284" cy="124" r="5"/></g>';
+  g+=shadow(62,172,36);
+  var sponge='<rect x="124" y="104" width="22" height="16" rx="5" fill="#FFD23F" transform="rotate(-14 135 112)"/><g fill="#fff" stroke="#7CC4FF" stroke-width="1.6"><circle cx="128" cy="102" r="4"/><circle cx="142" cy="100" r="3.5"/></g>';
+  var bucket='<path d="M44 140H78L74 170H48Z" fill="#2BA3B8"/><path d="M48 140Q61 124 74 140" stroke="#1E7F91" stroke-width="3" fill="none"/><g fill="#fff" stroke="#7CC4FF" stroke-width="1.6"><circle cx="52" cy="140" r="6"/><circle cx="62" cy="136" r="7"/><circle cx="72" cy="141" r="5"/></g>';
+  g+=person({x:92,y:72,hair:'short',hairC:'#1E1A1A',mustache:true,shirt:'#4CAF50',pants:'#3F4E6B',shorts:true,skin:SK3,
+    back:bucket+sponge,
+    legs:[[[86,124],[84,146],[82,166]],[[98,124],[100,146],[102,166]]],
+    arms:[[[106,94],[118,102],[130,108]],[[78,94],[64,110],[62,132]]]});
+  return svg(g,5);
+},
+/* 6. Murid menyapu lantai kelas */
+function(){
+  var g='<rect width="320" height="220" fill="#FFF7E0"/><rect y="150" width="320" height="70" fill="#D9A86C"/><g stroke="#C4915A" stroke-width="2"><path d="M0 170H320M0 192H320M60 150L40 220M140 150L132 220M220 150L228 220M300 150L322 220"/></g>';
+  g+='<rect x="24" y="26" width="132" height="76" rx="5" fill="#9B6B3A"/><rect x="31" y="33" width="118" height="62" fill="#2F6B55"/><g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9"><path d="M44 52H88M44 66H72M96 62Q106 50 116 62T136 62M44 80H132"/></g><rect x="40" y="97" width="24" height="5" rx="2" fill="#fff"/>';
+  g+='<rect x="232" y="30" width="68" height="68" rx="4" fill="#8E5726"/><rect x="238" y="36" width="56" height="56" fill="#BFE3FF"/><path d="M266 36V92M238 64H294" stroke="#8E5726" stroke-width="3"/>';
+  g+='<rect x="224" y="130" width="84" height="9" rx="3" fill="#B9763A"/><rect x="232" y="139" width="7" height="38" fill="#8E5726"/><rect x="292" y="139" width="7" height="38" fill="#8E5726"/><rect x="246" y="150" width="40" height="6" rx="3" fill="#C98B4B"/>';
+  var broom='<path d="M178 96L146 170" stroke="#8E5726" stroke-width="5" stroke-linecap="round"/><path d="M128 168L160 164L164 180L124 184Z" fill="#E8C46A"/><path d="M130 172L134 184M140 170L144 183M150 168L154 182" stroke="#B9923A" stroke-width="2"/>';
+  var dust='<g fill="#9AA3B5" opacity=".5"><circle cx="112" cy="176" r="6"/><circle cx="100" cy="184" r="4"/><circle cx="120" cy="188" r="5"/></g>';
+  g+=shadow(150,186,34)+dust;
+  g+=person({x:150,y:74,hair:'tudung',tudungC:'#fff',shirt:'#fff',pants:'#1F3B73',skirt:'#1F3B73',skirtHem:144,skin:SK2,legSkin:false,
+    back:broom,
+    legs:[[[145,128],[144,170]],[[156,128],[157,170]]],
+    arms:[[[140,94],[154,110],[164,126]],[[160,94],[170,98],[176,102]]]});
+  return svg(g,6);
+},
+/* 7. Dua murid bermain badminton */
+function(){
+  var g='<rect width="320" height="220" fill="#EAF3FF"/><rect y="146" width="320" height="74" fill="#E8C48A"/><g stroke="#fff" stroke-width="3"><path d="M0 168H320M160 146V220"/></g><path d="M0 146H320" stroke="#C99A58" stroke-width="3"/>';
+  g+='<rect x="0" y="40" width="320" height="6" fill="#C9E0FF"/><g fill="#FFD23F"><circle cx="40" cy="26" r="6"/><circle cx="90" cy="26" r="6"/></g><path d="M20 26h80" stroke="#FFD23F" stroke-width="2"/>';
+  g+='<rect x="157" y="104" width="6" height="68" fill="#6B7A99"/><rect x="146" y="112" width="28" height="42" fill="#fff" opacity=".35" stroke="#6B7A99" stroke-width="2"/><g stroke="#6B7A99" stroke-width="1.2">';
+  for(var i=1;i<4;i++) g+='<path d="M'+(146+i*7)+' 112V154"/>';
+  for(var j=1;j<6;j++) g+='<path d="M146 '+(112+j*7)+'H174"/>';
+  g+='</g><rect x="144" y="108" width="32" height="6" rx="2" fill="#fff" stroke="#6B7A99" stroke-width="1.6"/>';
+  g+=shadow(82,172,36)+shadow(240,172,36);
+  var r1='<path d="M118 66L128 46" stroke="#2A2438" stroke-width="3.4" stroke-linecap="round"/><g transform="rotate(25 134 36)"><ellipse cx="134" cy="36" rx="11" ry="15" fill="none" stroke="#E5A800" stroke-width="3.4"/><path d="M134 22V50M124 36H144M127 28L141 44M141 28L127 44" stroke="#C5D2E8" stroke-width="1"/></g>';
+  g+=person({x:82,y:72,hair:'short',hairC:'#1E1A1A',shirt:'#2F7BEA',pants:'#1F3B73',shorts:true,skin:SK3,shoe:'#fff',
+    back:r1,
+    legs:[[[76,124],[66,146],[58,166]],[[88,124],[100,144],[108,166]]],
+    arms:[[[96,94],[108,84],[118,66]],[[68,94],[58,108],[62,122]]]});
+  var r2='<path d="M204 76L194 56" stroke="#2A2438" stroke-width="3.4" stroke-linecap="round"/><g transform="rotate(-25 189 46)"><ellipse cx="189" cy="46" rx="11" ry="15" fill="none" stroke="#E5A800" stroke-width="3.4"/><path d="M189 32V60M179 46H199M182 38L196 54M196 38L182 54" stroke="#C5D2E8" stroke-width="1"/></g>';
+  g+=person({x:240,y:72,hair:'pigtails',hairC:'#3B2A20',ribbon:'#FFD23F',shirt:'#FF7AA8',pants:'#FF7AA8',skirt:'#fff',skirtHem:140,legSkin:true,skin:SK,shoe:'#fff',
+    back:r2,
+    legs:[[[234,128],[224,148],[220,166]],[[246,128],[256,148],[262,166]]],
+    arms:[[[226,94],[212,90],[204,76]],[[254,94],[262,108],[258,122]]]});
+  g+='<g transform="translate(160 52)"><path d="M0 0L-6 -14H6Z" fill="#fff" stroke="#9AA6C0" stroke-width="1.6" stroke-linejoin="round"/><circle cy="2" r="4.4" fill="#FF8A1F"/></g><g stroke="#9AA6C0" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 5"><path d="M140 62L154 56M180 60L168 56"/></g>';
+  return svg(g,7);
+},
+/* 8. Budak perempuan memberi makan kucing */
+function(){
+  var g=sky()+sunS(40,36)+cloud(150,34,1)+grass(150);
+  g+='<g fill="#B9763A">';
+  for(var i=0;i<9;i++) g+='<rect x="'+(i*38-6)+'" y="92" width="32" height="64" rx="3"/>';
+  g+='</g><rect y="104" width="320" height="6" fill="#8E5726"/><rect y="134" width="320" height="6" fill="#8E5726"/>';
+  g+=shadow(112,174,40);
+  var catBody='<path d="M262 160Q290 156 286 126Q284 114 278 118" stroke="#F2A03D" stroke-width="10" fill="none" stroke-linecap="round"/><ellipse cx="236" cy="150" rx="30" ry="26" fill="#F2A03D"/><ellipse cx="216" cy="172" rx="9" ry="5" fill="#F2A03D"/><ellipse cx="236" cy="174" rx="9" ry="5" fill="#F2A03D"/><path d="M228 140q8 -4 12 6M240 138q8 -4 12 6" stroke="#D07F1C" stroke-width="3" fill="none" stroke-linecap="round"/>';
+  var catHead='<g><path d="M184 132L186 112L198 124Z" fill="#F2A03D"/><path d="M196 124L209 112L212 132Z" fill="#F2A03D"/><circle cx="198" cy="142" r="19" fill="#F2A03D"/><path d="M192 126v6M198 124v7M204 126v6" stroke="#D07F1C" stroke-width="2.6" stroke-linecap="round"/><path d="M190 142q3 -3 6 0M202 142q3 -3 6 0" stroke="#2A2438" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M196 148h4l-2 3z" fill="#FF8FA3"/><path d="M198 151q-3 3 -6 1M198 151q3 3 6 1" stroke="#2A2438" stroke-width="1.4" fill="none"/><g stroke="#fff" stroke-width="1.3"><path d="M184 148L174 146M184 152L174 154M212 148L222 146M212 152L222 154"/></g></g>';
+  g+=catBody+catHead;
+  var bowl='<path d="M140 156H176Q174 172 158 172Q142 172 140 156Z" fill="#FF8A1F"/><ellipse cx="158" cy="156" rx="18" ry="5" fill="#FFD9A8"/><g transform="translate(158 154)"><ellipse rx="8" ry="3.2" fill="#8FB4D9"/><path d="M8 0L14 -4V4Z" fill="#8FB4D9"/><circle cx="-4" cy="-.6" r="1" fill="#2A2438"/></g>';
+  g+=person({x:92,y:84,hair:'pigtails',hairC:'#3B2A20',ribbon:'#FF4F8B',shirt:'#FF7AA8',pants:'#5B6EE1',skin:SK3,
+    legs:[[[88,138],[116,144],[110,170]],[[98,138],[126,148],[122,170]]],
+    arms:[[[106,106],[124,126],[142,150]],[[80,106],[94,130],[138,156]]],
+    front:bowl});
+  return svg(g,8);
+},
+/* 9. Pekebun menanam pokok */
+function(){
+  var g=sky()+sunS(284,36)+cloud(90,34,1)+cloud(200,60,.8)+grass(140);
+  g+='<ellipse cx="184" cy="168" rx="46" ry="12" fill="#8A5A2B"/><ellipse cx="184" cy="168" rx="30" ry="8" fill="#5A3A1E"/><path d="M236 176Q258 140 288 176Z" fill="#8A5A2B"/><path d="M236 176Q250 156 266 156" stroke="#A9733F" stroke-width="3" fill="none"/>';
+  g+=shadow(104,174,38);
+  var shovel='<path d="M76 108L70 154" stroke="#8E5726" stroke-width="5" stroke-linecap="round"/><path d="M60 154H80L76 180Q70 184 64 180Z" fill="#9AA6B5"/>';
+  var sap='<path d="M166 104L180 160" stroke="#6B4A2B" stroke-width="3.4" stroke-linecap="round"/><ellipse cx="181" cy="166" rx="11" ry="6" fill="#8A5A2B"/><g fill="#3FAE4A"><ellipse cx="160" cy="92" rx="11" ry="6" transform="rotate(-30 160 92)"/><ellipse cx="176" cy="88" rx="11" ry="6" transform="rotate(30 176 88)"/><ellipse cx="168" cy="102" rx="9" ry="5"/></g>';
+  g+=person({x:106,y:70,hair:'topi',hairC:'#2A1D16',shirt:'#4CAF50',pants:'#7A5230',skin:SK3,shoe:'#3B2A20',
+    back:shovel,
+    legs:[[[100,122],[98,146],[96,168]],[[112,122],[114,146],[116,168]]],
+    arms:[[[120,92],[140,100],[164,104]],[[92,92],[82,106],[76,112]]],
+    front:sap+'<circle cx="164" cy="104" r="5.2" fill="'+SK3+'"/>'});
+  return svg(g,9);
+},
+/* 10. Murid menyusun buku di rak */
+function(){
+  var g='<rect width="320" height="220" fill="#EAF3FF"/><rect y="168" width="320" height="52" fill="#D9B98C"/><path d="M0 168H320" stroke="#C39F6E" stroke-width="3"/>';
+  g+='<rect x="150" y="26" width="160" height="148" rx="5" fill="#B9763A"/><rect x="158" y="34" width="144" height="40" fill="#8E5726"/><rect x="158" y="82" width="144" height="40" fill="#8E5726"/><rect x="158" y="130" width="144" height="38" fill="#8E5726"/>';
+  var cols=['#E94B4B','#2F7BEA','#FFD23F','#4FAF54','#FF8A1F','#8E63CE','#2BA3B8'];
+  function row(y,x0,n){
+    var s='',x=x0;
+    for(var i=0;i<n;i++){var w=8+(i*5)%7,h=22+(i*7)%14;s+='<rect x="'+x+'" y="'+(y-h)+'" width="'+w+'" height="'+h+'" rx="1.5" fill="'+cols[(i+y)%cols.length]+'"/>';x+=w+2;}
+    return s;
+  }
+  g+=row(74,162,11)+row(122,196,9)+row(168,164,12);
+  g+=shadow(86,176,36);
+  var stack='<rect x="40" y="116" width="42" height="9" rx="2" fill="#2F7BEA"/><rect x="43" y="125" width="38" height="9" rx="2" fill="#E94B4B"/><rect x="40" y="134" width="42" height="8" rx="2" fill="#FFD23F"/>';
+  var book='<rect x="138" y="94" width="38" height="11" rx="2" fill="#4FAF54" transform="rotate(-6 157 100)"/><rect x="140" y="96" width="30" height="3" fill="#fff" opacity=".7" transform="rotate(-6 157 100)"/>';
+  g+=person({x:92,y:76,hair:'short',hairC:'#1E1A1A',shirt:'#fff',pants:'#1F3B73',shorts:true,skin:SK3,
+    legs:[[[86,128],[84,148],[82,170]],[[98,128],[100,148],[102,170]]],
+    arms:[[[78,98],[62,114],[62,140]],[[106,98],[124,100],[142,100]]],
+    front:stack+book+'<circle cx="62" cy="142" r="5.2" fill="'+SK3+'"/><circle cx="142" cy="100" r="5.2" fill="'+SK3+'"/>'});
+  return svg(g,10);
+}
+];
+
+/* ---------- Keadaan ---------- */
+var S={i:0,score:0,correct:0,results:[],attempts:0,hints:0,done:false};
+
+function show(id){
+  document.querySelectorAll('.screen').forEach(function(s){s.hidden=(s.id!==id);});
+  window.scrollTo(0,0);
+  var h=document.querySelector('#'+id+' [data-focus]');
+  if(h){h.setAttribute('tabindex','-1');try{h.focus({preventScroll:true});}catch(e){}}
+}
+
+function burst(el){
+  if(reduce) return;
+  var r=el.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;
+  var colors=['#FFD23F','#FF8A1F','#1F6FE5','#8FC1FF','#ffffff'];
+  for(var i=0;i<16;i++){
+    var p=document.createElement('i');
+    p.className='confetti';
+    p.style.left=x+'px';p.style.top=y+'px';p.style.background=colors[i%colors.length];
+    document.body.appendChild(p);
+    var a=Math.random()*Math.PI*2,d=50+Math.random()*80;
+    var an=p.animate([
+      {transform:'translate(0,0) rotate(0deg)',opacity:1},
+      {transform:'translate('+(Math.cos(a)*d)+'px,'+(Math.sin(a)*d+34)+'px) rotate('+(Math.random()*360)+'deg)',opacity:0}
+    ],{duration:700+Math.random()*350,easing:'cubic-bezier(.2,.7,.3,1)'});
+    an.onfinish=(function(n){return function(){n.remove();};})(p);
+  }
+}
+
+/* ---------- Soalan ---------- */
+function updateTop(){
+  $('qLabel').textContent='Soalan '+(S.i+1)+' daripada '+TOTAL;
+  $('qNum').textContent=S.i+1;
+  $('score').textContent=S.score;
+  var n=S.results.length;
+  $('barFill').style.width=(n/TOTAL*100)+'%';
+  $('bar').setAttribute('aria-valuenow',n);
+}
+
+function renderQuestion(){
+  S.attempts=0;S.hints=0;S.done=false;
+  $('scene').innerHTML=SCENES[S.i]();
+  var ta=$('jawapan');
+  ta.value='';ta.disabled=false;
+  $('btnSemak').disabled=false;
+  $('btnPetunjuk').disabled=false;
+  $('btnPetunjuk').textContent='PETUNJUK';
+  $('hints').innerHTML='';
+  $('feedback').innerHTML='';
+  $('after').hidden=true;
+  $('skipBox').hidden=true;
+  $('skopCard').hidden=true;
+  $('btnSkop').setAttribute('aria-expanded','false');
+  $('btnSkop').textContent='LIHAT SKOP';
+  $('btnNext').textContent=(S.i===TOTAL-1)?'LIHAT KEPUTUSAN':'SOALAN SETERUSNYA';
+  updateTop();
+}
+
+function startGame(){
+  S={i:0,score:0,correct:0,results:[],attempts:0,hints:0,done:false};
+  renderQuestion();
+  show('screen-game');
+  setTimeout(function(){try{$('jawapan').focus({preventScroll:true});}catch(e){}},50);
+}
+
+function chips(words){
+  var wrap=document.createElement('div');
+  wrap.className='chips';
+  words.forEach(function(w){
+    var c=document.createElement('div');
+    c.className='w '+w.role;
+    c.appendChild(document.createTextNode(w.text));
+    var l=document.createElement('span');
+    l.textContent=w.role;
+    c.appendChild(l);
+    wrap.appendChild(c);
+  });
+  return wrap;
+}
+function legend(){
+  var d=document.createElement('div');
+  d.className='legend';
+  d.innerHTML='<span><em style="background:var(--role-s)"></em>S Subjek</span><span><em style="background:var(--role-k)"></em>K Kata kerja</span><span><em style="background:var(--role-o)"></em>O Objek</span><span><em style="background:#fff;border-style:dashed"></em>P Peluasan</span>';
+  return d;
+}
+function el(tag,cls,text){
+  var e=document.createElement(tag);
+  if(cls) e.className=cls;
+  if(text!==undefined) e.textContent=text;
+  return e;
+}
+
+function showFeedback(node){
+  var fb=$('feedback');
+  fb.innerHTML='';
+  fb.appendChild(node);
+  try{fb.scrollIntoView({block:'nearest',behavior:reduce?'auto':'smooth'});}catch(e){}
+}
+
+var PRAISE=['Hebat sekali, ejen bahasa!','Ayat kamu lengkap dan tepat!','Bagus! Subjek, kata kerja dan objek kamu betul.','Cemerlang! Kamu pandai membina ayat.','Tepat sekali! Teruskan misi kamu.'];
+
+function doCheck(){
+  if(S.done) return;
+  var res=BA.check(S.i,$('jawapan').value);
+  if(res.ok){
+    S.done=true;
+    S.score+=10;S.correct++;S.results.push('betul');
+    $('jawapan').disabled=true;
+    $('btnSemak').disabled=true;
+    $('btnPetunjuk').disabled=true;
+    $('skipBox').hidden=true;
+    var box=el('div','fb good');
+    box.appendChild(el('h3','','TAHNIAH! AYAT ANDA BETUL!'));
+    box.appendChild(el('p','',PRAISE[S.i%PRAISE.length]));
+    box.appendChild(el('span','plus','+10 markah'));
+    box.appendChild(chips(res.words));
+    box.appendChild(legend());
+    if(res.extension) box.appendChild(el('p','','Wah, kamu juga meluaskan ayat dengan peluasan (P)!'));
+    res.tips.forEach(function(t){box.appendChild(el('p','small',t));});
+    showFeedback(box);
+    updateTop();
+    var sc=$('score');sc.classList.remove('bump');void sc.offsetWidth;sc.classList.add('bump');
+    burst($('feedback'));
+    $('after').hidden=false;
+    setTimeout(function(){try{$('btnNext').focus({preventScroll:true});}catch(e){}},60);
+    return;
+  }
+  if(res.code!=='kosong'){S.attempts++;}
+  var box2=el('div','fb retry');
+  box2.appendChild(el('h3','',res.code==='kosong'?'Ayat belum ditulis':'Cuba lagi!'));
+  box2.appendChild(el('p','',res.msg));
+  if(res.code!=='kosong') box2.appendChild(el('p','small','Tekan PETUNJUK jika kamu perlukan bantuan.'));
+  showFeedback(box2);
+  if(S.attempts>=3) $('skipBox').hidden=false;
+  try{$('jawapan').focus({preventScroll:true});}catch(e){}
+}
+
+function doHint(){
+  if(S.done) return;
+  var q=BA.Q[S.i];
+  if(S.hints>=q.hints.length) return;
+  var li=document.createElement('li');
+  li.appendChild(el('b','','Petunjuk '+(S.hints+1)+' daripada '+q.hints.length));
+  li.appendChild(el('span','',q.hints[S.hints]));
+  $('hints').appendChild(li);
+  S.hints++;
+  if(S.hints>=q.hints.length){
+    $('btnPetunjuk').disabled=true;
+    $('btnPetunjuk').textContent='SEMUA PETUNJUK DIBUKA';
+  }else{
+    $('btnPetunjuk').textContent='PETUNJUK ('+S.hints+'/'+q.hints.length+')';
+  }
+  try{li.scrollIntoView({block:'nearest',behavior:reduce?'auto':'smooth'});}catch(e){}
+}
+
+function doSkip(){
+  if(S.done) return;
+  S.done=true;
+  S.results.push('langkau');
+  $('jawapan').disabled=true;
+  $('btnSemak').disabled=true;
+  $('btnPetunjuk').disabled=true;
+  $('skipBox').hidden=true;
+  var q=BA.Q[S.i];
+  var res=BA.check(S.i,q.example);
+  var box=el('div','fb skip');
+  box.appendChild(el('h3','','Tidak mengapa, ejen!'));
+  box.appendChild(el('p','','Ini contoh ayat yang betul. Perhatikan bahagian S, K, O dan P.'));
+  if(res.ok) box.appendChild(chips(res.words)); else box.appendChild(el('p','',q.example));
+  box.appendChild(legend());
+  showFeedback(box);
+  updateTop();
+  $('after').hidden=false;
+  setTimeout(function(){try{$('btnNext').focus({preventScroll:true});}catch(e){}},60);
+}
+
+function next(){
+  if(S.i>=TOTAL-1){renderResults();show('screen-result');return;}
+  S.i++;
+  renderQuestion();
+  window.scrollTo(0,0);
+  setTimeout(function(){try{$('jawapan').focus({preventScroll:true});}catch(e){}},50);
+}
+
+/* ---------- Keputusan ---------- */
+function renderResults(){
+  var sc=S.score,pct=Math.round(sc/100*100);
+  var cat,msg;
+  if(sc===100){cat='Ejen Bahasa Terbilang!';msg='Semua ayat kamu betul. Kamu sangat pandai membina ayat dengan teknik SKOP.';}
+  else if(sc>=80){cat='Ejen Bahasa Cemerlang!';msg='Hampir sempurna! Main semula untuk mendapat markah penuh.';}
+  else if(sc>=50){cat='Ejen Bahasa Berani!';msg='Usaha kamu bagus. Gunakan petunjuk SKOP untuk membina ayat yang lebih tepat.';}
+  else{cat='Ejen Bahasa Pelatih!';msg='Jangan berhenti berlatih. Main semula dan ikut langkah SKOP satu demi satu.';}
+  $('resScore').textContent=sc;
+  $('ring').style.setProperty('--p',pct);
+  $('resCat').textContent=cat;
+  $('resMsg').textContent=msg;
+  $('stScore').textContent=sc+'/100';
+  $('stRight').textContent=S.correct+'/'+TOTAL;
+  $('stPct').textContent=pct+'%';
+  var rv=$('review');
+  rv.innerHTML='';
+  S.results.forEach(function(r,i){
+    var d=el('div','rv '+(r==='betul'?'ya':'tidak'));
+    d.appendChild(document.createTextNode(String(i+1)));
+    d.appendChild(el('small','',r==='betul'?'Betul':'Langkau'));
+    rv.appendChild(d);
+  });
+  if(sc>=80) setTimeout(function(){burst($('ring'));},350);
+}
+
+/* ---------- Butang ---------- */
+$('btnMula').addEventListener('click',startGame);
+$('btnCara').addEventListener('click',function(){show('screen-cara');});
+$('btnKredit').addEventListener('click',function(){show('screen-kredit');});
+$('btnCaraMula').addEventListener('click',startGame);
+$('btnCaraKembali').addEventListener('click',function(){show('screen-menu');});
+$('btnKreditKembali').addEventListener('click',function(){show('screen-menu');});
+
+$('btnSemak').addEventListener('click',doCheck);
+$('btnPetunjuk').addEventListener('click',doHint);
+$('btnNext').addEventListener('click',next);
+$('btnSkip').addEventListener('click',doSkip);
+$('btnSkop').addEventListener('click',function(){
+  var c=$('skopCard'),open=c.hidden;
+  c.hidden=!open;
+  this.setAttribute('aria-expanded',String(open));
+  this.textContent=open?'TUTUP SKOP':'LIHAT SKOP';
+});
+$('jawapan').addEventListener('keydown',function(e){
+  if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();doCheck();}
+});
+
+var exitTimer=0;
+$('btnKeluar').addEventListener('click',function(){
+  var b=this;
+  if(b.dataset.sure==='1'){
+    clearTimeout(exitTimer);b.dataset.sure='';b.textContent='KELUAR';
+    show('screen-menu');
+    return;
+  }
+  b.dataset.sure='1';b.textContent='TEKAN LAGI';
+  clearTimeout(exitTimer);
+  exitTimer=setTimeout(function(){b.dataset.sure='';b.textContent='KELUAR';},3000);
+});
+
+$('btnAgain').addEventListener('click',startGame);
+$('btnHome').addEventListener('click',function(){show('screen-menu');});
+
+})();
+</script>
+
+</body></html>
